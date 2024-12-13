@@ -1,15 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-.activeNavLink {
-  font-weight: bold;
+
+// Global Rules
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: {
+    family: 'Cabin', sans-serif;
+    size: 1.6rem;
+  }
+
+  text-align: center;
+  line-height: 1.5;
+
+  color: white;
+  background: linear-gradient(0deg, hsl(313, 100%, 20%) 1%, black 30%);
+}
+
+
+// Active NavLinks
+
+.activeNavLink {
+  animation: active 5s ease-in-out infinite;
+}
+
 
 .inactiveNavLink {
-  font-weight: normal;
+  text-shadow: 0 rgba(255, 255, 255, 0);
 }
 
-/*
-:root {
-  box-sizing: border-box;
+@keyframes active {
+
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0),
+        0 0 20px rgba(255, 255, 255, 0),
+        0 0 30px rgba(255, 255, 255, 0);
+  }
+
+  60% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+        0 0 20px rgba(255, 255, 255, 1),
+        0 0 30px rgba(255, 255, 255, 1);
+  }
+
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0),
+        0 0 20px rgba(255, 255, 255, 0),
+        0 0 30px rgba(255, 255, 255, 0);
+  }
 }
-*/

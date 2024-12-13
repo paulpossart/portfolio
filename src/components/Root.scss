@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 .Root {
     display: grid;
     grid-template-areas:
@@ -12,17 +8,12 @@
     min-width: 100vw;
     max-height: 100vh;
     max-width: 100vw;
-    text-align: center;
 
+    .header {
+        grid-area: header;
+    }
+
+    .outlet {
+        grid-area: body;
+    }
 }
-
-.header {
-    grid-area: header;
-    background-color: yellow;
-}
-
-.outlet {
-    grid-area: body;
-    background-color: green;
-}
-
