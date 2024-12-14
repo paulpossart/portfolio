@@ -1,3 +1,122 @@
-.title {
-    font-family: 'Permanent Marker';
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 10vh;
+
+    & .titleBox {
+        display: block;
+        position: relative;
+        background-color: #48ff00;
+        color: white;
+        width: 100%;
+        overflow: hidden;
+
+        & h1 {
+            mix-blend-mode: multiply;
+            background-color: black;
+            height: auto;
+            position: relative;
+            z-index: 1;
+
+            animation: textShadow 10s ease-in-out infinite;
+
+            font: {
+                family: 'Permanent Marker';
+                size: 10rem;
+                weight: 600;
+            }
+        }
+
+        & div {
+            border-radius: 50%;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            filter: blur(20px);
+        }
+
+        .titleShape1 {
+            background-color: #FF00C8;
+            transform: translate(48px, -16px);
+            animation: shape-1 20s 1s ease-out infinite;
+        }
+
+        .titleShape2 {
+            background-color: #FF6D28;
+            transform: translate(-80px, 16px);
+            animation: shape-2 18s ease-in infinite;
+        }
+
+        .titleShape3 {
+            width: 50%;
+            background-color: #FCE700;
+            transform: translate(20px, -16px);
+            animation: shape-3 10s ease-out infinite;
+        }
+
+        .titleShape4 {
+            width: 25%;
+            background-color: #00F5FF;
+            transform: translate(-100px, 25px);
+            animation: shape-4 15s 1s ease-in-out infinite;
+        }
+
+    }
+
+    & h2 {
+        font: {
+            family: 'Roboto Condensed', sans-serif;
+            weight: 400;
+            size: 2.8rem;
+            line-height: 2;
+        }
+    }
+}
+
+@keyframes textShadow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0),
+            0 0 20px rgba(255, 255, 255, 0),
+            0 0 30px rgba(255, 255, 255, 0);
+    }
+
+    60% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0),
+            0 0 20px rgba(255, 255, 255, 0),
+            0 0 30px rgba(255, 255, 255, 0);
+    }
+
+}
+
+@keyframes shape-1 {
+    50% {
+        transform: translate(-28px, 0);
+    }
+}
+
+@keyframes shape-2 {
+    33% {
+        transform: translate(220px, 28px);
+    }
+}
+
+@keyframes shape-3 {
+    50% {
+        transform: translate(20px, 60px);
+    }
+}
+
+@keyframes shape-4 {
+    66% {
+        transform: translate(100px, -20px);
+    }
 }
