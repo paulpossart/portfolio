@@ -1,3 +1,9 @@
+@mixin titleShape($color, $x, $y, $animation) {
+    background-color: $color;
+    transform: translate($x, $y);
+    animation: $animation;
+}
+
 .header {
     display: flex;
     flex-direction: column;
@@ -25,7 +31,7 @@
 
             font: {
                 family: 'Permanent Marker';
-                size: 10rem;
+                size: clamp(50px, 10vmax, 150px);
                 weight: 600;
             }
         }
@@ -39,38 +45,29 @@
         }
 
         .titleShape1 {
-            background-color: #FF00C8;
-            transform: translate(48px, -16px);
-            animation: shape-1 20s 1s ease-out infinite;
+            @include titleShape(#FF00C8, 48px, -16px, shape-1 20s 1s ease-out infinite);
         }
 
         .titleShape2 {
-            background-color: #FF6D28;
-            transform: translate(-80px, 16px);
-            animation: shape-2 18s ease-in infinite;
+            @include titleShape(#FF6D28, -80px, 16px, shape-2 18s ease-in infinite);
         }
 
         .titleShape3 {
             width: 50%;
-            background-color: #FCE700;
-            transform: translate(20px, -16px);
-            animation: shape-3 10s ease-out infinite;
+            @include titleShape(#FCE700, 20px, -16px, shape-3 10s ease-out infinite)
         }
 
         .titleShape4 {
             width: 25%;
-            background-color: #00F5FF;
-            transform: translate(-100px, 25px);
-            animation: shape-4 15s 1s ease-in-out infinite;
+            @include titleShape(#00F5FF, -100px, 25px, shape-4 15s 1s ease-in-out infinite);
         }
-
     }
 
     & h2 {
         font: {
             family: 'Roboto Condensed', sans-serif;
             weight: 400;
-            size: 2.8rem;
+            size: clamp(2.5rem, 3vmax, 6rem);
             line-height: 2;
         }
     }
