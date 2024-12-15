@@ -1,3 +1,119 @@
-.title {
-    font-family: 'Permanent Marker';
+@mixin titleShape($color, $x, $y, $animation) {
+    background-color: $color;
+    transform: translate($x, $y);
+    animation: $animation;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 10vh;
+
+    & .titleBox {
+        display: block;
+        position: relative;
+        background-color: #48ff00;
+        color: white;
+        width: 100%;
+        overflow: hidden;
+
+        & h1 {
+            mix-blend-mode: multiply;
+            background-color: black;
+            height: auto;
+            position: relative;
+            z-index: 1;
+
+            animation: textShadow 10s ease-in-out infinite;
+
+            font: {
+                family: 'Permanent Marker';
+                size: clamp(50px, 10vmax, 150px);
+                weight: 600;
+            }
+        }
+
+        & div {
+            border-radius: 50%;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            filter: blur(20px);
+        }
+
+        .titleShape1 {
+            @include titleShape(#FF00C8, 48px, -16px, shape-1 20s 1s ease-out infinite);
+        }
+
+        .titleShape2 {
+            @include titleShape(#FF6D28, -80px, 16px, shape-2 18s ease-in infinite);
+        }
+
+        .titleShape3 {
+            width: 50%;
+            @include titleShape(#FCE700, 20px, -16px, shape-3 10s ease-out infinite)
+        }
+
+        .titleShape4 {
+            width: 25%;
+            @include titleShape(#00F5FF, -100px, 25px, shape-4 15s 1s ease-in-out infinite);
+        }
+    }
+
+    & h2 {
+        font: {
+            family: 'Roboto Condensed', sans-serif;
+            weight: 400;
+            size: clamp(2.5rem, 3vmax, 6rem);
+            line-height: 2;
+        }
+    }
+}
+
+@keyframes textShadow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0),
+            0 0 20px rgba(255, 255, 255, 0),
+            0 0 30px rgba(255, 255, 255, 0);
+    }
+
+    60% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0),
+            0 0 20px rgba(255, 255, 255, 0),
+            0 0 30px rgba(255, 255, 255, 0);
+    }
+
+}
+
+@keyframes shape-1 {
+    50% {
+        transform: translate(-28px, 0);
+    }
+}
+
+@keyframes shape-2 {
+    33% {
+        transform: translate(220px, 28px);
+    }
+}
+
+@keyframes shape-3 {
+    50% {
+        transform: translate(20px, 60px);
+    }
+}
+
+@keyframes shape-4 {
+    66% {
+        transform: translate(100px, -20px);
+    }
 }
