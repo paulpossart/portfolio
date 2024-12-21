@@ -1,0 +1,61 @@
+@use '../../styles/buttons/buttons.scss';
+
+.contact {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10vh;
+
+    .contactWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.4em;
+        width: fit-content;
+        padding: 1.4em 1.8em 1.4em 1.8em;
+        border: solid #444 4px;
+        border-radius: 15px;
+        background: linear-gradient(180deg, hsl(313, 100%, 20%) 1%, black 30%);
+
+        .mailme {
+            letter-spacing: 1px;
+        }
+
+        .contactForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.6rem;
+
+            .input {
+                font: {
+                    family: 'Cabin', sans-serif;
+                    size: 1.6rem;
+                }
+
+                margin: 0.4em 0;
+                border: solid black 1px;
+                border-radius: 5px;
+                line-height: 1.6;
+                width: 15em;
+            }
+
+            .textarea {
+                height: 8em;
+            }
+
+            .submit {
+                font-size: 1.6rem;
+
+                &:active {
+                    &::after {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
