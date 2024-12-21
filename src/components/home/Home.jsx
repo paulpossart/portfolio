@@ -3,7 +3,7 @@ import styles from './Home.module.scss';
 
 function Home() {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.titleBox}>
                 <h1>Paul Possart</h1>
                 <div className={styles.titleShape1}></div>
@@ -12,7 +12,7 @@ function Home() {
                 <div className={styles.titleShape4}></div>
             </div>
             <h2>frontend developer</h2>
-        </div>
+        </header>
     );
 };
 

@@ -23,6 +23,13 @@ body {
 
   color: white;
   background: linear-gradient(0deg, hsl(313, 100%, 20%) 1%, black 30%);
+  background-attachment: fixed;
+
+  @media (min-width: 800px),
+  (orientation: portrait) and (min-width: 390px) {
+    font-size: 2rem;
+  }
+
 }
 
 

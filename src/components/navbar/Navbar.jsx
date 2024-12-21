@@ -5,8 +5,7 @@ import homeIcon from '../../assets/icons/home-svgrepo-com.svg'
 
 function Navbar({ className }) {
     return (
-        <div className={`${className} ${styles.navbar}`}>
-
+        <nav className={`${className} ${styles.navbar}`}>
             <NavLink
                 to="/"
                 className={styles.homeButton}>
@@ -31,7 +30,7 @@ function Navbar({ className }) {
                     : 'inactiveNavLink'} ${styles.contactBtn}`}>
                 contact
             </NavLink>
-        </div >
+        </nav >
     );
 };
 
