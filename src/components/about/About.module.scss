@@ -1,0 +1,45 @@
+.about {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+
+    .iconWrapper { 
+        max-width: clamp(300px, 90vw, 715px);
+        overflow: hidden;
+        mask-image: linear-gradient(to right,
+                transparent,
+                black 25%,
+                black 75%,
+                transparent);
+        mask-mode: alpha;
+
+        .iconContainer {
+            width: 715px;
+            margin-top: 1em;
+
+            .iconScroll {
+                width: 200%;
+                animation: iconScroll 20s linear infinite;
+
+                & img {
+                    width: 35px;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes iconScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

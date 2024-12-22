@@ -1,6 +1,6 @@
 import Root from './components/Root';
 import Home from './components/home/Home';
-import About from './components/about/about';
+import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 
