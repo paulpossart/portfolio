@@ -12,14 +12,14 @@ function Navbar({ className }) {
                 <img src={homeIcon} alt="home icon" />
             </NavLink>
 
-{/*
+
             <NavLink
                 to="about"
                 className={({ isActive }) => `${isActive ? 'activeNavLink'
                     : 'inactiveNavLink'} ${styles.aboutBtn}`}>
                 about
             </NavLink>
-*/}
+
 
             <NavLink to="projects"
                 className={({ isActive }) => `${isActive ? 'activeNavLink'
