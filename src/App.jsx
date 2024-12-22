@@ -9,14 +9,15 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route
-} from 'react-router-dom'
+} from 'react-router-dom';
+
+// {/*<Route path="/:project" element={<ProjectPage />} />*/}
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root />}>
     <Route path="/" element={<Home />} />
     <Route path="about" element={<About />} />
     <Route path="projects" element={<Projects />} />
-      {/*<Route path="/:project" element={<ProjectPage />} />*/}
     <Route path="contact" element={<Contact />} />
   </Route>
 ))
