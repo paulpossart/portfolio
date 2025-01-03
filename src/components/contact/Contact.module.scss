@@ -41,11 +41,11 @@
                 border: solid black 1px;
                 border-radius: 5px;
                 line-height: 1.6;
-                width: 15em;
+                width: clamp(15em, 25vw, 20em);
             }
 
             .textarea {
-                height: 8em;
+                height: clamp(8em, 20vh, 15em); //8 - 20vh -  15
             }
 
             .submit {

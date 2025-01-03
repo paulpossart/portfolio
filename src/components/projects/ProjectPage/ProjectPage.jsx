@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { projectList } from "./projectData";
+import styles from './ProjectPage.module.scss';
 
 function ProjectPage() {
     const { projectId } = useParams();
@@ -12,7 +13,7 @@ function ProjectPage() {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <h3>Project: {project.name}</h3>
             <p>{project.desc}</p>
         </div>

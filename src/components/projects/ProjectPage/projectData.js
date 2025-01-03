@@ -1,16 +1,18 @@
 /* 
 Each project needs:
-    id
-    name
-    icon
-    about
-    live link
-    Github link
+    /   id
+    /   name
+        icon
+        about
+        live link
+        Github link
+        Figma
 */
+import mixtapeIcon from '../../../assets/icons/cassette-tape-illustration-1-svgrepo-com.svg';
+import redditIcon from '../../../assets/icons/reddit-icon-svgrepo-com.svg';
 
 export const projectList = [
-    {id: "project1", name: "Project 1", desc: "blah1"},
-    {id: "project2", name: "Project 2", desc: "blah2"},
-    {id: "project3", name: "Project 3", desc: "blah3"},
-    {id: "project4", name: "Project 4", desc: "blah4"}
+    {id: "mixtape", name: "mixtape", icon: mixtapeIcon, desc: "info1"},
+    {id: "redditLite", name: "redditLite", icon: redditIcon, desc: "info2"},
+    {id: "portfolio", name: "Portfolio", desc: "info3"},
 ];
