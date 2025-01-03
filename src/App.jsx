@@ -1,8 +1,8 @@
 import Root from './components/Root';
 import Home from './components/home/Home';
 import About from './components/about/Info';
-
 import Projects from './components/projects/Projects';
+import ProjectPage from './components/projects/ProjectPage/ProjectPage';
 import Contact from './components/contact/Contact';
 
 import {
@@ -12,14 +12,14 @@ import {
   Route
 } from 'react-router-dom';
 
-// {/*<Route path="/:project" element={<ProjectPage />} />*/}
-//
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root />}>
-    <Route path="/" element={<Home />} />
+    <Route index element={<Home />} />
     <Route path="about" element={<About />} />
-    <Route path="projects" element={<Projects />} />
+    <Route path="projects" element={<Projects />}>
+      <Route path=":projectId" element={<ProjectPage />} />
+    </Route>
     <Route path="contact" element={<Contact />} />
   </Route>
 ))

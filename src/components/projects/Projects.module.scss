@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.navbar {
+    position: absolute;
+    left: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(68, 68, 68, 0.2)0%, rgba(68, 68, 68, 0.6)30%, rgba(68, 68, 68, 1)60%);
+    background-size: 400%;
+    padding: 0.5em;
+    z-index: 3;
+
+    border: {
+        radius: 15px;
+        style: solid;
+        width: 3px;
+        color: hsla(0, 0%, 47%, 0.5)
+    }
+
+    .navOption {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 8vh;
+        padding: 1.5em 0;
+
+        .navCollapse {
+            max-width: 0;
+            opacity: 0;
+            padding-right: 0;
+            overflow: hidden;
+            transition: max-width 0.5s ease-out,
+                opacity 0.5s ease-in-out,
+                padding 0.75s ease-out;
+        }
+
+        .navExtend {
+            max-width: 200px;
+            opacity: 1;
+            padding-right: 15px;
+            transition: max-width 0.5s ease-in,
+                opacity 0.5s ease-in-out,
+                padding 0.2s ease-out;
+        }
+
+        & span {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .mixtape {
+            font-family: 'Source Sans 3';
+            color: black;
+            font-weight: 700;
+            text-shadow:
+                -1px -1px 0 #FDD100,
+                1px -1px 0 #FDD100,
+                -1px 1px 0 #FDD100,
+                1px 1px 0 #FDD100;
+        }
+
+        .redditLite {
+            display: visible;
+        }
+
+        .portfolio {
+            font-family: 'Permanent Marker';
+        }
+
+        .pTag {
+            font: {
+                family: 'Permanent Marker';
+                size: 30px;
+            }
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: clamp(40%, 35px, 100%);
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border-radius: 50%;
+            background-color: hsl(313, 100%, 50%);
+            min-width: 35px;
+            min-height: 35px;
+        }
+    }
+
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+
+    & img {
+        width: 35px;
+        margin: 1px;
+
+    }
+
+    .icon {
+        cursor: pointer;
+    }
+
+    .iconLeft {
+        transform: scaleX(-1);
+        transition: transform 1s ease;
+    }
+
+    .iconRight {
+        transform: scaleX(1);
+        transition: transform 1s ease;
+    }
+}
+
+.viewContainer {
+    min-height: 80vh;
+    max-height: 80vh;
+    max-width: 80vw;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.projectView {
+    .pleaseSelect {
+        position: relative;
+        top: 20vh;
+        z-index: 2;
+    }
+
+    z-index: 1;
+    background-color: rgba(68, 68, 68, 0.1);
+    min-height: 80vh;
+    max-height: 80vh;
+    max-width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    overflow: scroll;
+
+}

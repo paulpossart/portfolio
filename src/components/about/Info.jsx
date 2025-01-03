@@ -15,7 +15,6 @@ import jestImg from "../../assets/icons/jest-snapshot-svgrepo-com.svg";
 import gitImg from "../../assets/icons/git-svgrepo-com.svg";
 import githubImg from "../../assets/icons/github-color-svgrepo-com.svg";
 
-
 function About() {
     return (
             <section>
